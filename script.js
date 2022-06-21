@@ -22,7 +22,7 @@ const complete = () => {
 // Get quotes from API
 const getQuotes = async () => {
   loading();
-  const apiUrl = "https:/type.fit/api/quotes";
+  const apiUrl = "https://type.fit/api/quotes";
   try {
     const response = await fetch(apiUrl);
     apiQuotes = await response.json();
