@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ZTM | Quote Generator</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://www.google.com/s2/favicons?domain=zerotomastery.io"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <main class="[ quote-container card ] [ flow ]" id="quote-container">
+      <!-- Quote -->
+      <div class="[ quote-text ] [ fs-42px ]">
+        <i class="[ fas fa-quote-left ] [ fs-30px ]"></i>
+        <span class="quote" id="quote"></span>
+        <i class="[ fas fa-quote-right ] [ fs-30px ]"></i>
+      </div> <!-- end of quote-text -->
+
+      <!-- Author -->
+      <div class="[ quote-author ] [ fs-28px fw-400 italic ]">
+        <span id="author"></span>
+      </div> <!-- end of quote-author -->
+
+      <!-- Buttons -->
+      <div class="[ button-container ] [ space-between ]">
+        <button data-type="twitter" id="twitter" title="Tweet this!">
+          <i class="[ fab fa-twitter ] [ fs-24px ]"></i>
+        </button>
+        <button id="new-quote">New Quote</button>
+      </div> <!-- end of button-container -->
+    </main>
+
+    <!-- Loader -->
+    <div class="loader" id="loader"></div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
