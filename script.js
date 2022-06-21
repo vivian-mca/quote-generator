@@ -11,7 +11,7 @@ let apiQuotes = [];
 const loading = () => {
   loader.hidden = false;
   quoteContainer.hidden = true;
-}
+};
 
 // Hide loading
 const complete = () => {
@@ -28,18 +28,18 @@ const getQuotes = async () => {
     apiQuotes = await response.json();
     newQuote();
   } catch (error) {
-    alert(`Whoops, something went wrong. Error: ${error}`);
+    alert(`Whoops, something went wrong. ${error}`);
   }
 };
 
 // Show new quote
 const newQuote = () => {
   loading();
-  
+
   // Pick a random quote from apiQuotes array
   const randIndex = Math.floor(Math.random() * apiQuotes.length);
   const quote = apiQuotes[randIndex];
-  
+
   // Check if author field is 'null' (blank) & replace it with 'Unknown'
   if (!quote.author) {
     authorText.textContent = "Unknown";
