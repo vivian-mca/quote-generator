@@ -40,7 +40,7 @@ body {
 \*------------------------------------*/
 
 .flow > * + * {
-  margin-block-start: var(--space, var(--15px));
+  margin-block-start: var(--15px);
 }
 
 .space-between {
@@ -64,10 +64,6 @@ body {
   font-size: var(--42px);
 }
 
-.fs-64px {
-  font-size: var(--64px);
-}
-
 .fw-400 {
   font-weight: 400;
 }
@@ -80,7 +76,6 @@ body {
   #BLOCK
 \*------------------------------------*/
 .card {
-  width: auto;
   max-width: var(--900px);
   padding: var(--20px) var(--30px);
   border-radius: var(--10px);
@@ -110,6 +105,10 @@ button:active {
   box-shadow: 0 0.1rem rgba(255, 255, 255, 0.65);
 }
 
+.button-twitter:hover {
+  color: var(--color-twitter);
+}
+
 .loader {
   border: 16px solid var(--color-neutral-200);
   border-top: 16px solid var(--color-primary-300);
@@ -127,9 +126,6 @@ button:active {
 /*------------------------------------*\
   #EXCEPTION
 \*------------------------------------*/
-button[data-type="twitter"]:hover {
-  color: var(--color-twitter);
-}
 
 .quote[data-state="long"] {
   font-size: 2rem;
@@ -140,7 +136,7 @@ button[data-type="twitter"]:hover {
 \*------------------------------------*/
 
 /* Tablet or smaller */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1024px) {
   .quote-container {
     margin: auto var(--10px);
   }
