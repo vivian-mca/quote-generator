@@ -41,11 +41,7 @@ const newQuote = () => {
   const quote = apiQuotes[randIndex];
 
   // Check if author field is 'null' (blank) & replace it with 'Unknown'
-  if (!quote.author) {
-    authorText.textContent = "Unknown";
-  } else {
-    authorText.textContent = quote.author;
-  }
+  authorText.textContent = quote.author ?? "Unknown";
 
   // If quote is longer than 120 characters, make font size smaller
   if (quote.text.length > 120) {
