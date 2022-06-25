@@ -61,5 +61,3 @@ const tweetQuote = () => {
 newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
-// On load, run getQuotes()
-// getQuote();
