@@ -8,18 +8,13 @@ const loader = document.getElementById("loader");
 let apiQuotes = [];
 
 // If true, show loading spinner. If false, hide loading spinner.
-const showLoadingSpinner = (bool) => {
-  if (bool) {
-    loader.hidden = false;
-    quoteContainer.hidden = true;
-  } else {
-    loader.hidden = true;
-    quoteContainer.hidden = false;
-  }
+const showLoadingSpinner = (isHidden) => {
+  loader.hidden = !isHidden;
+  quoteContainer.hidden = isHidden;
 };
 
 // Get a quote from API
-const getQuote = async () => {
+const getQuote = (async () => {
   showLoadingSpinner(true);
   const apiUrl = "https://type.fit/api/quotes";
   try {
@@ -30,10 +25,10 @@ const getQuote = async () => {
     alert(`Whoops, something went wrong. Try again later.`);
     console.log(error);
   }
-};
+})();
 
 // Show new quote
-const newQuote = () => {
+function newQuote() {
   showLoadingSpinner(true);
 
   // Pick a random quote from apiQuotes array
@@ -53,7 +48,7 @@ const newQuote = () => {
   // Set quote & hide loader
   quoteText.textContent = quote.text;
   showLoadingSpinner(false);
-};
+}
 
 // Tweet quote
 const tweetQuote = () => {
@@ -67,4 +62,4 @@ newQuoteBtn.addEventListener("click", newQuote);
 twitterBtn.addEventListener("click", tweetQuote);
 
 // On load, run getQuotes()
-getQuote();
+// getQuote();
