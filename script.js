@@ -28,7 +28,7 @@ const getQuote = (async () => {
 })();
 
 // Show new quote
-function newQuote() {
+const newQuote = () => {
   showLoadingSpinner(true);
 
   // Pick a random quote from apiQuotes array
